@@ -10,7 +10,7 @@ set :linked_files, %w{config/database.yml config/application.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 set :keep_releases, 5
 set :rvm_type, :user
-set :rvm_ruby_version, 'ruby 2.2.4p230' # Edit this if you are using MRI Ruby
+set :rvm_ruby_version, 'ruby-2.3.0' # Edit this if you are using MRI Ruby
 
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
 set :puma_state, "#{shared_path}/tmp/pids/puma.state"
@@ -27,6 +27,8 @@ set :puma_worker_timeout, nil
 set :puma_init_active_record, true
 set :puma_preload_app, false
 
+
+set :ssh_options, { config: false, number_of_password_prompts: 0 }
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
@@ -39,7 +41,7 @@ set :puma_preload_app, false
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
-# You can configure the Airbrussh format using :format_options.
+# You can configure the Airbrush format using :format_options.
 # These are the defaults.
 # set :format_options, command_output: true, log_file: 'log/capistrano.log', color: :auto, truncate: :auto
 

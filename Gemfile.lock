@@ -99,7 +99,7 @@ GEM
     mysql2 (0.4.4-x86-mingw32)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
-    net-ssh (3.1.1)
+    net-ssh (2.9.2)
     nokogiri (1.6.8-x86-mingw32)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
@@ -187,6 +187,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mysql2 (>= 0.3.13, < 0.5)
+  net-ssh (= 2.9.2)
   puma
   rails (= 4.2.5.1)
   sass-rails (~> 5.0)
